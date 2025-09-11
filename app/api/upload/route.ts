@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
-import { api, ApiError } from '../api';
+import { api } from '../api';
 import { cookies } from 'next/headers';
-
+import { AxiosError } from 'axios';
+type ApiError = AxiosError<{ error: string }>
 
 export async function POST(request: Request) {
   const cookieStore = await cookies();
