@@ -4,8 +4,9 @@ import {
     QueryClient,
 } from '@tanstack/react-query'
 import NotePageClient from './NoteDetails.client'
-import { getNoteById } from '@/lib/api'
+
 import { Metadata } from 'next'
+import { getNoteById } from '@/lib/api/serverApi'
 
 type Props = {
     params: Promise<{ id: string }>

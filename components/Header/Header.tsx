@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import css from './Header.module.css'
 import TagsMenu from '../TagsMenu/TagsMenu'
-import { getTags } from '@/lib/api'
+import { getTags } from '@/lib/api/clientApi'
+import AuthNavigation from '../AuthNavigation/AuthNavigation'
 
-async function Header() {
-    const response = await getTags()
+function Header() {
+    const response = getTags()
     return (
         <header className={css.header}>
             <Link href="/" aria-label="Home">
@@ -18,6 +19,7 @@ async function Header() {
                     <li>
                         <TagsMenu tags={response}></TagsMenu>
                     </li>
+                    <AuthNavigation />
                 </ul>
             </nav>
         </header>

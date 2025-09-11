@@ -1,4 +1,4 @@
-import { getTags } from '@/lib/api'
+import { getTags } from '@/lib/api/clientApi'
 import css from './Sidebar.module.css'
 import Link from 'next/link'
 export default function Sidebar() {

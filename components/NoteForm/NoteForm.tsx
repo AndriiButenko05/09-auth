@@ -2,9 +2,10 @@
 
 import css from './NoteForm.module.css'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
-import { CreateNote, createNote, getTags } from '../../lib/api'
+
 import { useRouter } from 'next/navigation'
 import { useNoteDraftStore } from '@/lib/store/noteStore'
+import { CreateNote, createNote, getTags } from '@/lib/api/clientApi'
 
 export default function NoteForm() {
     const tags = getTags()

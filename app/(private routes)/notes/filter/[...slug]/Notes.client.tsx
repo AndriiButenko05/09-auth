@@ -5,9 +5,10 @@ import css from './Notes.module.css'
 import NoteList from '@/components/NoteList/NoteList'
 import Pagination from '@/components/Pagination/Pagination'
 import SearchBox from '@/components/SearchBox/SearchBox'
-import { fetchNotes } from '@/lib/api'
+
 import { useDebounce } from 'use-debounce'
 import Link from 'next/link'
+import { fetchNotesClient } from '@/lib/api/clientApi'
 
 interface NotesClientProps {
     tag?: string
@@ -20,11 +21,7 @@ export default function NotesClient({ tag }: NotesClientProps) {
     const { data, isLoading, isError } = useQuery({
         queryKey: ['notes', currentPage, debouncedSearchedQuery, tag],
         queryFn: () =>
-            fetchNotes(
-                currentPage,
-                debouncedSearchedQuery || undefined,
-                tag || undefined
-            ),
+            fetchNotesClient(debouncedSearchedQuery, currentPage, 9, tag),
         placeholderData: keepPreviousData,
         refetchOnMount: false,
     })
