@@ -5,9 +5,12 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
 import { useAuthStore } from '@/lib/store/authStore'
-import { ApiError } from '@/app/api/api'
+
 import { login } from '@/lib/api/clientApi'
 import { LoginRequest } from '@/types/auth'
+import { AxiosError } from 'axios'
+
+type ApiError = AxiosError<{ error: string }>
 
 const SignIn = () => {
     const router = useRouter()
