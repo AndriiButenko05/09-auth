@@ -2,9 +2,10 @@
 
 import { cookies } from "next/headers";
 import { nextServer } from './api';
-import { User } from './clientApi';
+
 import { Note } from '@/types/note';
 import { isAxiosError } from 'axios';
+import { User } from "@/types/user";
 export const checkServerSession = async () => {
   // Дістаємо поточні cookie
   const cookieStore = await cookies();

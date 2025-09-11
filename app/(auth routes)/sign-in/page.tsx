@@ -6,7 +6,8 @@ import { useRouter } from 'next/navigation'
 
 import { useAuthStore } from '@/lib/store/authStore'
 import { ApiError } from '@/app/api/api'
-import { login, LoginRequest } from '@/lib/api/clientApi'
+import { login } from '@/lib/api/clientApi'
+import { LoginRequest } from '@/types/auth'
 
 const SignIn = () => {
     const router = useRouter()

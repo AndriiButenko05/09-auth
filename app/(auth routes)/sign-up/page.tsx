@@ -5,7 +5,8 @@ import { useRouter } from 'next/navigation'
 
 import { useAuthStore } from '@/lib/store/authStore'
 import { ApiError } from '@/app/api/api'
-import { register, RegisterRequest } from '@/lib/api/clientApi'
+import { register } from '@/lib/api/clientApi'
+import { RegisterRequest } from '@/types/auth'
 
 const SignUp = () => {
     const router = useRouter()

@@ -1,22 +1,14 @@
 import { Note } from '@/types/note' 
 import { nextServer } from './api';
 import { isAxiosError } from 'axios';
+import { User } from '@/types/user';
+import { LoginRequest, RegisterRequest } from '@/types/auth';
 
 export interface CreateNote {
     title: string
     content: string
     tag: string
 }
-export interface User {
-  email: string;
-  username: string;
-  avatar: string;
-    photoUrl?: string;
-  createdAt: Date;
-  updatedAt: Date;
-}
-
-
 
 export const getTags = (): string[] => {
     return ['Work', 'Personal', 'Meeting', 'Shopping', 'Todo']
@@ -77,20 +69,13 @@ export const uploadImage = async (file: File): Promise<string> => {
   const { data } = await nextServer.post('/upload', formData);
   return data.url;
 };
-export type RegisterRequest = {
-  email: string;
-  password: string;
-  userName: string;
-};
+
 
 export const register = async (data: RegisterRequest) => {
   const res = await nextServer.post<User>('/auth/register', data);
   return res.data;
 };
-export type LoginRequest = {
-  email: string;
-  password: string;
-};
+
 
 export const login = async (data: LoginRequest) => {
   const res = await nextServer.post<User>('/auth/login', data);
