@@ -11,11 +11,14 @@ interface NotePreviewProps {
 
 export default function NotePreview({ id }: NotePreviewProps) {
     const router = useRouter()
-    const { data } = useQuery({
+    const { data, isLoading } = useQuery({
         queryKey: ['notes', id],
         queryFn: () => getNoteById(id),
         refetchOnMount: false,
     })
+
+    if (isLoading) return <p>Loading Content...</p>
+    if (!data) return <p>Note not found</p>
 
     const close = () => router.back()
     return (

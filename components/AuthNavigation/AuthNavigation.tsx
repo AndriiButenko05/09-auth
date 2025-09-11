@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useAuthStore } from '@/lib/store/authStore'
 import { logout } from '@/lib/api/clientApi'
+import css from './AuthNavigation.module.css'
 
 const AuthNavigation = () => {
     const router = useRouter()
@@ -27,18 +28,49 @@ const AuthNavigation = () => {
 
     // Якщо є сесія - відображаємо кнопку Logout та інформацію про користувача
     // інакше - лінки для авторизації
-    return isAuthenticated ? (
-        <li>
-            <p>{user?.email}</p>
-            <button onClick={handleLogout}>Logout</button>
-        </li>
-    ) : (
+    if (isAuthenticated) {
+        return (
+            <>
+                <li className={css.navigationItem}>
+                    <Link
+                        href="/profile"
+                        prefetch={false}
+                        className={css.navigationLink}
+                    >
+                        Profile
+                    </Link>
+                </li>
+
+                <li className={css.navigationItem}>
+                    <p className={css.userEmail}>{user?.email}</p>
+                    <button className={css.logoutButton} onClick={handleLogout}>
+                        Logout
+                    </button>
+                </li>
+            </>
+        )
+    }
+
+    return (
         <>
-            <li>
-                <Link href="/sign-in">Login</Link>
+            <li className={css.navigationItem}>
+                <Link
+                    href="/sign-in"
+                    prefetch={false}
+                    className={css.navigationLink}
+                >
+                    Login
+                </Link>
             </li>
-            <li>
-                <Link href="/sign-up">Sign up</Link>
+
+            <li className={css.navigationItem}>
+                <Link
+                    href="/sign-up"
+                    prefetch={false}
+                    className={css.navigationLink}
+                >
+                    Sign up
+                </Link>
             </li>
         </>
     )

@@ -4,9 +4,12 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
 import { useAuthStore } from '@/lib/store/authStore'
-import { ApiError } from '@/app/api/api'
+
 import { register } from '@/lib/api/clientApi'
 import { RegisterRequest } from '@/types/auth'
+import { AxiosError } from 'axios'
+
+type ApiError = AxiosError<{ error: string }>
 
 const SignUp = () => {
     const router = useRouter()
@@ -38,10 +41,6 @@ const SignUp = () => {
         <>
             <h1>Sign up</h1>
             <form action={handleSubmit}>
-                <label>
-                    Username
-                    <input type="text" name="userName" required />
-                </label>
                 <label>
                     Email
                     <input type="email" name="email" required />
