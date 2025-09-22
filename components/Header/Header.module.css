@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #333;
+    background-color: #87ceeb;
     color: white;
 }
 
@@ -24,20 +24,17 @@
     padding: 0;
     display: flex;
     gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navigation li a {
     text-decoration: none;
     color: white;
-    font-size: 1rem;
+    font-size: 20px;
 }
 
 .navigation li a:hover {
     color: #ddd;
-}
-
-.navigation {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }

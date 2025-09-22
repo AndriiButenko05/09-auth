@@ -24,7 +24,10 @@ export default function NotePreview({ id }: NotePreviewProps) {
     return (
         <Modal onClose={close}>
             <div className={css.item}>
-                <button onClick={close} className={css.backBtn}>
+                <button
+                    onClick={close}
+                    className={`${css.customBtn} ${css.btn2}`}
+                >
                     Close
                 </button>
                 <h2 className={`${css.header} ${css.h2}`}>{data?.title}</h2>

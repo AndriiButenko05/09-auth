@@ -1,7 +1,7 @@
 .userEmail {
     color: white;
     margin-right: 0.5rem;
-    font-size: 0.9rem;
+    font-size: 20px;
 }
 
 .logoutButton {
@@ -15,11 +15,16 @@
     transition:
         background-color 0.3s ease,
         color 0.3s ease;
+    font-size: 20px;
+    font-family: Caveat;
+    transition:
+        border 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
 }
 
 .logoutButton:hover {
-    background-color: white;
-    color: #333;
+    border: 1px solid #4169e1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navigationItem {

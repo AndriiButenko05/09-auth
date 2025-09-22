@@ -1,13 +1,14 @@
 .form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 16px;
 }
 
 .formGroup {
     display: flex;
     flex-direction: column;
-    font-size: 14px;
+    font-size: 24px;
     font-weight: 500;
     color: #212529;
     margin-bottom: 10px;
@@ -16,13 +17,14 @@
 .input,
 .textarea,
 .select {
-    font-family: var(--font-roboto);
+    font-family: Caveat;
     margin-top: 4px;
     padding: 8px 12px;
-    font-size: 14px;
+    font-size: 18px;
     border: 1px solid #ced4da;
     border-radius: 4px;
     resize: none;
+    width: 200px;
 }
 
 .actions {
@@ -70,4 +72,98 @@
     color: #dc3545;
     font-size: 12px;
     margin-top: 4px;
+}
+.input {
+    height: 18px;
+    padding: 12px;
+    border: 2px solid #87ceeb;
+    border-radius: 8px;
+    outline: none;
+    font-size: 18px;
+    font-family: Caveat;
+    transition:
+        border-color 0.3s,
+        box-shadow 0.3s,
+        transform 0.3s;
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.input:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+    transform: scale(1.02);
+}
+
+/* Placeholder Styling */
+.input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Hover Effect */
+.input:hover {
+    background-color: #f0f8ff;
+}
+.textarea {
+    border: 2px solid #87ceeb;
+    border-radius: 8px;
+    outline: none;
+    transition:
+        border-color 0.3s,
+        box-shadow 0.3s,
+        transform 0.3s;
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.textarea:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+    transform: scale(1.02);
+}
+
+/* Placeholder Styling */
+.textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Hover Effect */
+.textarea:hover {
+    background-color: #f0f8ff;
+}
+.textarea {
+    width: 250px;
+    height: 120px;
+}
+.select {
+    border: 2px solid #87ceeb;
+    border-radius: 8px;
+    outline: none;
+    transition:
+        border-color 0.3s,
+        box-shadow 0.3s,
+        transform 0.3s;
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box;
+}
+.select:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+    transform: scale(1.02);
+}
+
+/* Placeholder Styling */
+.select::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Hover Effect */
+.select:hover {
+    background-color: #f0f8ff;
 }

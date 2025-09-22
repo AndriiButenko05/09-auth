@@ -9,6 +9,7 @@ import { useAuthStore } from '@/lib/store/authStore'
 import { login } from '@/lib/api/clientApi'
 import { LoginRequest } from '@/types/auth'
 import { AxiosError } from 'axios'
+import css from './page.module.css'
 
 type ApiError = AxiosError<{ error: string }>
 
@@ -40,17 +41,31 @@ const SignIn = () => {
 
     return (
         <form action={handleSubmit}>
-            <h1>Sign in</h1>
-            <label>
-                Email
-                <input type="email" name="email" required />
-            </label>
-            <label>
-                Password
-                <input type="password" name="password" required />
-            </label>
-            <button type="submit">Log in</button>
-            {error && <p>{error}</p>}
+            <h1 className={css.title}>Sign in</h1>
+            <div className={css.container}>
+                <label className={css.label}>Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    required
+                    className={css.input}
+                />
+                <label className={css.label}>Password</label>
+                <input
+                    type="password"
+                    name="password"
+                    required
+                    className={css.input}
+                />
+                <button
+                    type="submit"
+                    className={`${css.customBtn} ${css.btn2}`}
+                >
+                    Log in
+                </button>
+            </div>
+
+            {error && <p className={css.title}>{error}</p>}
         </form>
     )
 }

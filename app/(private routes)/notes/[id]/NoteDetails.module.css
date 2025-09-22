@@ -23,19 +23,19 @@
 
 .header h2 {
     margin: 0;
-    font-size: 28px;
+    font-size: 32px;
     color: #333;
 }
 
 .content {
-    font-size: 18px;
+    font-size: 25px;
     line-height: 26px;
     color: #444;
     white-space: pre-wrap;
 }
 
 .date {
-    font-size: 14px;
+    font-size: 18px;
     color: #888;
     text-align: right;
 }

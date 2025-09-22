@@ -1,0 +1,93 @@
+.title {
+    font-size: 50px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.label {
+    font-size: 25px;
+}
+.customBtn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow:
+        inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+        7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+        4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-family: Caveat;
+}
+
+.btn2 {
+    background: #87ceeb;
+    background: linear-gradient(0deg, #87ceeb 0%, #87ceeb 100%);
+    border: none;
+}
+
+.btn2:before {
+    height: 0%;
+    width: 2px;
+}
+
+.btn2:hover {
+    box-shadow:
+        4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+        -4px -4px 6px 0 rgba(116, 125, 136, 0.5),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+.input {
+    width: 200px;
+    height: 18px;
+    padding: 12px;
+    border: 2px solid #87ceeb;
+    border-radius: 8px;
+    outline: none;
+    font-size: 18px;
+    transition:
+        border-color 0.3s,
+        box-shadow 0.3s,
+        transform 0.3s;
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box;
+    font-family: Caveat;
+}
+
+.input:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+    transform: scale(1.02);
+}
+
+/* Placeholder Styling */
+.input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Hover Effect */
+.input:hover {
+    background-color: #f0f8ff;
+}

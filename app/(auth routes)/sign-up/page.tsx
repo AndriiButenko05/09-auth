@@ -8,6 +8,7 @@ import { useAuthStore } from '@/lib/store/authStore'
 import { register } from '@/lib/api/clientApi'
 import { RegisterRequest } from '@/types/auth'
 import { AxiosError } from 'axios'
+import css from './page.module.css'
 
 type ApiError = AxiosError<{ error: string }>
 
@@ -39,19 +40,32 @@ const SignUp = () => {
 
     return (
         <>
-            <h1>Sign up</h1>
-            <form action={handleSubmit}>
-                <label>
-                    Email
-                    <input type="email" name="email" required />
-                </label>
-                <label>
-                    Password
-                    <input type="password" name="password" required />
-                </label>
-                <button type="submit">Register</button>
+            <h1 className={css.title}>Sign up</h1>
+
+            <form action={handleSubmit} className={css.container}>
+                <label className={css.label}>Email</label>{' '}
+                <input
+                    type="email"
+                    name="email"
+                    required
+                    className={css.input}
+                />
+                <label className={css.label}>Password</label>{' '}
+                <input
+                    type="password"
+                    name="password"
+                    required
+                    className={css.input}
+                />
+                <button
+                    type="submit"
+                    className={`${css.customBtn} ${css.btn2}`}
+                >
+                    Register
+                </button>
             </form>
-            {error && <p>{error}</p>}
+
+            {error && <p className={css.title}>{error}</p>}
         </>
     )
 }

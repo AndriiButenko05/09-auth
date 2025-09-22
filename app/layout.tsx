@@ -1,16 +1,15 @@
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import { Caveat } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header/Header'
 import TanStackProvider from '@/components/TanStackProvider/TanStackProvider'
 import Footer from '@/components/Footer/Footer'
 import AuthProvider from '@/components/AuthProvider/AuthProvider'
 
-const roboto = Roboto({
-    variable: '--font-roboto',
+const caveat = Caveat({
+    variable: '--font-caveat',
     subsets: ['latin'],
-    weight: ['400', '700'],
-    display: 'swap',
+    weight: ['400', '500', '700'],
 })
 
 export const metadata: Metadata = {
@@ -42,7 +41,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${roboto.variable}`}>
+            <body className={`${caveat.variable}`}>
                 <TanStackProvider>
                     <AuthProvider>
                         <Header />

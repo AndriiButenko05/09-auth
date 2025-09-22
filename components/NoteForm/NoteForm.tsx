@@ -39,38 +39,40 @@ export default function NoteForm() {
         <form action={handleSubmit} className={css.form}>
             <div className={css.formGroup}>
                 <label htmlFor="title">Title</label>
-                <input
-                    id="title"
-                    type="text"
-                    name="title"
-                    className={css.input}
-                    onChange={handleChange}
-                    value={draft?.title}
-                />
             </div>
-
+            <input
+                id="title"
+                type="text"
+                name="title"
+                className={css.input}
+                onChange={handleChange}
+                value={draft?.title}
+            />
             <div className={css.formGroup}>
                 <label htmlFor="content">Content</label>
-                <textarea
-                    id="content"
-                    name="content"
-                    className={css.textarea}
-                    onChange={handleChange}
-                    value={draft?.content}
-                />
-            </div>
-
+            </div>{' '}
+            <textarea
+                id="content"
+                name="content"
+                className={css.textarea}
+                onChange={handleChange}
+                value={draft?.content}
+            />
             <div className={css.formGroup}>
                 <label htmlFor="tag">Tag</label>
-                <select name="tag" value={draft?.tag} onChange={handleChange}>
-                    {tags.map((tag) => (
-                        <option key={tag} value={tag} defaultValue={draft?.tag}>
-                            {tag}
-                        </option>
-                    ))}
-                </select>
             </div>
-
+            <select
+                name="tag"
+                value={draft?.tag}
+                onChange={handleChange}
+                className={css.select}
+            >
+                {tags.map((tag) => (
+                    <option key={tag} value={tag} defaultValue={draft?.tag}>
+                        {tag}
+                    </option>
+                ))}
+            </select>
             <div className={css.actions}>
                 <button
                     type="button"

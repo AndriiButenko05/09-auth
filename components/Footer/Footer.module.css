@@ -1,24 +1,25 @@
 .footer {
-  padding: 20px;
-  background-color: #f0f0f0;
-  text-align: center;
-  font-size: 14px;
-  color: #555;
-  border-top: 1px solid #ddd;
+    padding: 20px;
+    background-color: #87ceeb;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    border-top: 1px solid #ddd;
 }
 
 .wrap {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .footer a {
-  color: #226ec5;
-  font-weight: 600;
-  text-decoration: none;
+    color: #4169e1;
+    font-weight: 600;
+    text-decoration: none;
+    transition: text-decoration 0.5s ease-in-out;
 }
 
 .footer a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }

@@ -44,7 +44,7 @@ export default function NotesClient({ tag }: NotesClientProps) {
                     )}
                     {
                         <Link
-                            className={css.button}
+                            className={`${css.customBtn} ${css.btn2}`}
                             href="/notes/action/create"
                         >
                             Create note +

@@ -92,15 +92,18 @@ export default function EditProfilePage() {
                         />
                     </div>
 
-                    <p>Email: {email}</p>
+                    <p className={css.text}>Email: {email}</p>
 
                     <div className={css.actions}>
-                        <button type="submit" className={css.saveButton}>
+                        <button
+                            type="submit"
+                            className={`${css.customBtn} ${css.btn2}`}
+                        >
                             Save
                         </button>
                         <button
                             type="button"
-                            className={css.cancelButton}
+                            className={`${css.customBtn} ${css.btn2}`}
                             onClick={handleCancel}
                         >
                             Cancel

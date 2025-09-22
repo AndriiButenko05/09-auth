@@ -20,7 +20,7 @@
 }
 
 .title {
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 600;
     margin: 0 0 8px 0;
     color: #212529;
@@ -29,7 +29,7 @@
 .content {
     margin: 0;
     flex-grow: 1;
-    font-size: 14px;
+    font-size: 20px;
     color: #495057;
     margin-bottom: 12px;
     display: -webkit-box;
@@ -41,13 +41,14 @@
 .button {
     align-self: flex-end;
     padding: 6px 12px;
-    font-size: 14px;
+    font-size: 15px;
     color: #fff;
     background-color: #dc3545;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.3s ease-in-out;
+    font-family: Caveat;
 }
 
 .button:hover {
@@ -64,7 +65,7 @@
 .tag {
     display: inline-block;
     padding: 4px 8px;
-    font-size: 12px;
+    font-size: 15px;
     color: #0d6efd;
     background-color: #e7f1ff;
     border: 1px solid #b6d4fe;

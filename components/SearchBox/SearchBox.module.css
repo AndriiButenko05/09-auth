@@ -1,8 +1,34 @@
 .input {
-    flex: 1;
-    max-width: 240px;
-    padding: 6px 12px;
-    font-size: 16px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
+    width: 250px;
+    height: 18px;
+    padding: 12px;
+    border: 2px solid #87ceeb;
+    border-radius: 8px;
+    outline: none;
+    font-size: 18px;
+    font-family: Caveat;
+    transition:
+        border-color 0.3s,
+        box-shadow 0.3s,
+        transform 0.3s;
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.input:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+    transform: scale(1.02);
+}
+
+/* Placeholder Styling */
+.input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Hover Effect */
+.input:hover {
+    background-color: #f0f8ff;
 }
